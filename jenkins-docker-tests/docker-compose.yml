@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    container_name: jenkins
+
+  pytest-runner:
+    image: python:3.10
+    volumes:
+      - ./pytest:/app
+    working_dir: /app
+    command: sh -c "pip install -r requirements.txt && pytest"
+
+volumes:
+  jenkins_home:
