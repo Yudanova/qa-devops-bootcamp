@@ -12,10 +12,11 @@ services:
 
   pytest-runner:
     image: python:3.10
-        volumes:
-      - ./pytest:/app
+    volumes:
+      - ./pytest:/app  # ✅ Mounts the pytest folder
     working_dir: /app
     command: sh -c "pip install -r requirements.txt && pytest"
 
 volumes:
   jenkins_home:
+
