@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clone repo') {
       steps {
-        git 'https://github.com/yudanova/qa-devops-bootcamp.git'
+        git 'https://github.com/yudanova/qa-devops-bootcamp.git'  //updated by me
       }
     }
 
