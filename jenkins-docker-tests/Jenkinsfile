@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Clone repo') {
+      steps {
+        git 'https://github.com/yudanova/qa-devops-bootcamp.git'
+      }
+    }
+
+    stage('Run tests in Docker') {
+      steps {
+        sh 'docker-compose -f jenkins-docker-tests/docker-compose.yml up --abort-on-container-exit'
+      }
+    }
+  }
+}
