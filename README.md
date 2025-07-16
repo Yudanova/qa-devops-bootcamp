@@ -1,53 +1,56 @@
 # DevOps for QA Bootcamp 🚀
 
-📍 **Цель:** получить реальные DevOps-навыки, применимые к работе QA-инженера: CI/CD, Jenkins, GitHub Actions, Docker, AWS, логирование и инфраструктура для автотестов.
+📍 **Goal:** Gain real DevOps skills applicable to QA work: CI/CD, Jenkins, GitHub Actions, Docker, AWS, logging, and infrastructure for automated testing.
 
 ---
 
-## 🧠 Изученные темы
+## 🧠 Topics Covered
 
 - ✔️ Git, GitHub, CI pipeline structure
-- ✔️ Jenkins pipelines: запуск автотестов
-- ✔️ Docker: окружения и тесты в контейнерах
-- ✔️ GitHub Actions: автоматизация тестов
+- ✔️ Jenkins pipelines: running automated tests
+- ✔️ Docker: environments and containerized tests
+- ✔️ GitHub Actions: test automation
 - ✔️ AWS: EC2, S3, IAM, CloudWatch
-- ✔️ Логирование и мониторинг
-- ✔️ API-тесты в CI
+- ✔️ Logging and monitoring
+- ✔️ API testing in CI
 
 ---
 
-## 📁 Проекты
+## 📁 Projects
 
-| Проект | Что внутри | Статус |
-|--------|------------|--------|
-| `jenkins-docker-tests` | Jenkins в Docker + автотесты | ✅ |
-| `aws-report-upload` | Автотест → отчёт → S3 bucket | ✅ |
-| `ci-github-actions` | Тесты запускаются при push | ✅ |
-
----
-
-## 📓 devops-journal.md — дневник обучения
-
-### 📆 День 1
-**Курс:** DevOps Pre-Requisite (KodeKloud)  
-**Тема:** Linux + Shell + процессы  
-**Команды:** `cd`, `ls -l`, `ps aux`, `chmod`, `kill`  
-**Что узнала:** Как искать процессы и завершать их. Как задавать права.  
-**Что буду делать дальше:** Установка Git и практика с GitHub
-
-### 📆 День 2
-**Курс:** Git for Beginners (KodeKloud)  
-**Тема:** git init, add, commit, push, ветки  
-**Практика:** создала репозиторий, оформила README, сделала первый push  
-**Проблемы:** конфликт в ветке — решила через merge tool
-
-### 📆 День 3
-**Курс:** Jenkins for Beginners  
-**Что сделала:**  
-- Подняла Jenkins в Docker  
-- Создала freestyle job с запуском pytest  
-- Настроила webhook с GitHub
+| Project                | Description                          | Status |
+|------------------------|--------------------------------------|------- |
+| `jenkins-docker-tests` | Jenkins in Docker + automated tests  | ✅    |
+| `aws-report-upload`    | Automated test → report → S3 bucket  | ✅    |
+| `ci-github-actions`    | Tests run on push via GitHub Actions | ✅    |
 
 ---
 
-_Журнал будет продолжаться. Скриншоты, pipeline'ы и итоговые результаты — в директориях проектов._
+## 📓 devops-journal.md — daily learning journal
+
+_A detailed record of my DevOps learning progress as a QA engineer: daily summaries of what I study, commands used, key takeaways, and any issues encountered._
+
+### 📆 Day 1
+**Course:** DevOps Pre-Requisite (KodeKloud)  
+**Topic:** Linux + Shell + processes  
+**Commands:** `cd`, `ls -l`, `ps aux`, `chmod`, `kill`  
+**Learned:** How to find and terminate processes, set permissions.  
+**Next step:** Install Git and practice with GitHub
+
+### 📆 Day 2
+**Course:** Git for Beginners (KodeKloud)  
+**Topic:** git init, add, commit, push, branching  
+**Practice:** Created repository, wrote README, made first push  
+**Issue:** Merge conflict — resolved with merge tool
+
+### 📆 Day 3
+**Course:** Jenkins for Beginners  
+**What I did:**  
+- Launched Jenkins in Docker  
+- Created a freestyle job running pytest  
+- Set up webhook from GitHub
+
+---
+
+_The journal will continue. Screenshots, pipeline code, and final results are in the respective project directories._
+
