@@ -50,6 +50,17 @@ _A detailed record of my DevOps learning progress as a QA engineer: daily summar
 - Created a freestyle job running pytest using the Jenkins GUI  
 - Set up webhook from GitHub  
 **Note:** This pipeline was configured through the **Jenkins web interface** (freestyle job), not as code.
+  ### 💡 Why `requirements.txt` is inside `pytest/`
+In this project, we deliberately placed `requirements.txt` inside the `pytest/` folder instead of the root. This design has a purpose:
+
+| Reason                                | Explanation                                                                        |
+|---------------------------------------|------------------------------------------------------------------------------------|
+| 🧪 Isolated testing environment      | Only the test files and their dependencies are mounted inside the container.        |
+| 🧹 Clean project structure           | Keeps unrelated DevOps files (Jenkinsfile, docker-compose.yml) separate from tests. |
+| 🎓 Great for learning                | Helps focus on test-related logic while understanding Docker volumes.               |
+
+This setup is best for small, educational projects. In real-world pipelines, placing `requirements.txt` in the root is more common, as tools like GitHub Actions or Jenkins often expect it there. But for now, this is a clean and intentional approach. Finally I moved it to the root.
+
 
   ### 📆 Day 4
 **Project:** `jenkins-docker-tests`  
