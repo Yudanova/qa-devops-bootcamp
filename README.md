@@ -50,6 +50,17 @@ _A detailed record of my DevOps learning progress as a QA engineer: daily summar
 - Created a freestyle job running pytest  
 - Set up webhook from GitHub
 
+  ### 📆 Day 4
+**Project:** `jenkins-docker-tests`  
+**What I did:**  
+- Created `Jenkinsfile` to define CI pipeline  
+- Created `docker-compose.yml` to run Jenkins and pytest-runner containers  
+- Wrote `pytest/test_example.py` and `requirements.txt`  
+- Mounted `pytest/` folder as volume in Docker to run tests  
+- Pipeline structure: Git clone → Docker spin-up → run `pytest`  
+**Learned:** How to connect all CI parts: GitHub + Jenkins + Docker + Pytest  
+**Next step:** Test this in KodeKloud Playground and move to GitHub Actions
+
 ---
 
 _The journal will continue. Screenshots, pipeline code, and final results are in the respective project directories._
