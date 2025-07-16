@@ -47,18 +47,20 @@ _A detailed record of my DevOps learning progress as a QA engineer: daily summar
 **Course:** Jenkins for Beginners  
 **What I did:**  
 - Launched Jenkins in Docker  
-- Created a freestyle job running pytest  
-- Set up webhook from GitHub
+- Created a freestyle job running pytest using the Jenkins GUI  
+- Set up webhook from GitHub  
+**Note:** This pipeline was configured through the **Jenkins web interface** (freestyle job), not as code.
 
   ### 📆 Day 4
 **Project:** `jenkins-docker-tests`  
 **What I did:**  
-- Created `Jenkinsfile` to define CI pipeline  
+- Created `Jenkinsfile` to define CI pipeline using **code** instead of GUI  
 - Created `docker-compose.yml` to run Jenkins and pytest-runner containers  
 - Wrote `pytest/test_example.py` and `requirements.txt`  
 - Mounted `pytest/` folder as volume in Docker to run tests  
 - Pipeline structure: Git clone → Docker spin-up → run `pytest`  
 **Learned:** How to connect all CI parts: GitHub + Jenkins + Docker + Pytest  
+**Important:** This was my first **“pipeline as code”** experience — no GUI, just `Jenkinsfile`. The pipeline is now version-controlled and reproducible.  
 **Next step:** Test this in KodeKloud Playground and move to GitHub Actions
 
 ---
