@@ -59,7 +59,7 @@ In this project, we deliberately placed `requirements.txt` inside the `pytest/` 
 | 🧹 Clean project structure           | Keeps unrelated DevOps files (Jenkinsfile, docker-compose.yml) separate from tests. |
 | 🎓 Great for learning                | Helps focus on test-related logic while understanding Docker volumes.               |
 
-This setup is best for small, educational projects. In real-world pipelines, placing `requirements.txt` in the root is more common, as tools like GitHub Actions or Jenkins often expect it there. But for now, this is a clean and intentional approach. Finally I moved it to the root.
+This setup is best for small, educational projects. In real-world pipelines, placing `requirements.txt` in the root is more common, as tools like GitHub Actions or Jenkins often expect it there. But for now, this is a clean and intentional approach. Finally I moved it to the jenkins-docker-tests.
 
 
   ### 📆 Day 4
