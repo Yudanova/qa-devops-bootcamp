@@ -1,25 +1,29 @@
 services:
   jenkins:
     image: jenkins/jenkins:lts
-    ports:
-      - "8080:8080"
-      - "50000:50000"
-    volumes:
-      - jenkins_home:/var/jenkins_home
     container_name: jenkins
+    ports:
+      - "8080:8080"      # Jenkins web interface
+      - "50000:50000"    # Agent-to-controller connection
+    volumes:
+      - jenkins_home:/var/jenkins_home  # Persistent Jenkins data
     dns:
-      - 8.8.8.8
-      - 1.1.1.1
+      - 8.8.8.8          # Google DNS
+      - 1.1.1.1          # Cloudflare DNS
+    depends_on:
+      - pytest-runner    # Jenkins starts after pytest-runner (optional)
 
   pytest-runner:
-    image: python:3.10
-    volumes:
-      - ./:/app
-    working_dir: /app
-    command: sh -c "pip install -r requirements.txt && pytest"
+    image: python:3.11
     container_name: pytest-runner
+    working_dir: /app
+    volumes:
+      - ./pytest:/app    # Mount only the test code folder
+    command: >
+      sh -c "pip install -r requirements.txt &&
+             pytest tests/ --html=reports/report.html"
+    tty: true
 
 volumes:
-  jenkins_home:
-    
+  jenkins_home:          # Named volume to persist Jenkins state
 
