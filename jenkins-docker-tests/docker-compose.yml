@@ -7,6 +7,9 @@ services:
     volumes:
       - jenkins_home:/var/jenkins_home
     container_name: jenkins
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
 
   pytest-runner:
     image: python:3.10
