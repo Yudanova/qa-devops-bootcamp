@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - ./jenkins-docker-tests:/var/jenkins_home/userContent
+      - ./reports:/reports
+      - /var/run/docker.sock:/var/run/docker.sock
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    depends_on:
+      - playwright-tests
+
+  playwright-tests:
+    build:
+      context: .
+      dockerfile: docker/playwright/Dockerfile
+    container_name: playwright-tests
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ./reports:/app/reports
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      pytest tests/ --html=reports/report.html --self-contained-html
+      --alluredir=reports/allure-results
+    tty: true
+
+volumes:
+  jenkins_home:

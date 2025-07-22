@@ -1,0 +1,17 @@
+workflow-aggregator
+pipeline-stage-view
+pipeline-model-definition
+pipeline-build-step
+junit
+htmlpublisher
+git
+github
+docker-workflow
+matrix-project
+credentials
+plain-credentials
+ssh-credentials
+credentials-binding
+display-url-api
+resource-disposer
+durable-task

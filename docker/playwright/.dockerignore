@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.env
+.git
+.idea/
+venv/
+.vscode/
+reports/
+playwright-report/
+test-results/
+
